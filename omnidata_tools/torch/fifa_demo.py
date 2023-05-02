@@ -111,8 +111,8 @@ if __name__ == '__main__':
     normal_model = setup_normal_model(ckpt_dir, device)
 
     output_dir = '/home/fspinola/zetong/fifa/regnerf/data/fifa_TUN-ALG/'
-    depth_dir = output_dir + f'omnidepth_{factor}'
-    normal_dir = output_dir + f'omninormal_{factor}'
+    depth_dir = output_dir + f'omnidepths_{factor}'
+    normal_dir = output_dir + f'omninormals_{factor}'
     os.makedirs(depth_dir,exist_ok=True)
     os.makedirs(normal_dir,exist_ok=True)
     get_omnidata_depth(depth_model,images,device,depth_dir)
